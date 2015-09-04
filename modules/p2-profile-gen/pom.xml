@@ -111,7 +111,26 @@
                                 <featureArtifactDef>
                                     org.wso2.carbon.devicemgt:org.wso2.carbon.apimgt.webapp.publisher.feature:${carbon.device.mgt.version}
                                 </featureArtifactDef>
+
+								<!--ES feature wrapper inside CDMF-->
+								<featureArtifactDef>
+									org.wso2.carbon.devicemgt:org.wso2.carbon.device.mgt.enterprise.store.feature:${carbon.device.mgt.version}
+								</featureArtifactDef>
                                 <!-- End of Device Management Features -->
+
+
+								<!-- API Management Features -->
+								<featureArtifactDef>
+									org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.core.feature:${carbon.apimgt.version}
+								</featureArtifactDef>
+								<featureArtifactDef>
+									org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.publisher.feature:${carbon.apimgt.version}
+								</featureArtifactDef>
+								<featureArtifactDef>
+									org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.store.feature:${carbon.apimgt.version}
+								</featureArtifactDef>
+								<!-- End of API Management Features -->
+
 
                                 <!-- Jaggery Features -->
                                 <featureArtifactDef>
@@ -304,17 +323,7 @@
                                     org.wso2.carbon.governance:org.wso2.carbon.registry.extensions.feature:${carbon.governance.version}
                                 </featureArtifactDef>
 
-                                <!-- API Management Features -->
-                                <featureArtifactDef>
-                                    org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.core.feature:${carbon.apimgt.version}
-                                </featureArtifactDef>
-                                <featureArtifactDef>
-                                    org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.publisher.feature:${carbon.apimgt.version}
-                                </featureArtifactDef>
-                                <featureArtifactDef>
-                                    org.wso2.carbon.apimgt:org.wso2.carbon.apimgt.store.feature:${carbon.apimgt.version}
-                                </featureArtifactDef>
-                                <!-- End of API Management Features -->
+
 
                                 <!--- Notification Support: Mail -->
                                 <featureArtifactDef>
@@ -333,12 +342,6 @@
 
 								<!--========================================================================================================-->
 								<!-- Enterprise Store Features -->
-
-                                <featureArtifactDef>
-                                    org.wso2.carbon.devicemgt:org.wso2.carbon.device.mgt.enterprise.store.feature:${carbon.device.mgt.version}
-                                </featureArtifactDef>
-
-
 								<!-- Jaggery Features -->
 								<!--+++++++++++++++++++++++++++++++++++++++++++++++-->
 								<featureArtifactDef>
@@ -524,10 +527,6 @@
 								<!--=====================================================================================================-->
 
 
-
-
-
-
                             </featureArtifacts>
                         </configuration>
                     </execution>
@@ -546,6 +545,7 @@
                             </destination>
                             <deleteOldProfileFiles>true</deleteOldProfileFiles>
                             <features>
+
                                 <!-- Device Management Features -->
                                 <feature>
                                     <id>org.wso2.carbon.device.mgt.server.feature.group</id>
@@ -559,11 +559,35 @@
                                     <id>org.wso2.carbon.policy.mgt.server.feature.group</id>
                                     <version>${carbon.device.mgt.version}</version>
                                 </feature>
-                                <feature>
-                                    <id>org.wso2.carbon.apimgt.webapp.publisher.feature.group</id>
-                                    <version>${carbon.device.mgt.version}</version>
-                                </feature>
+								<feature>
+									<id>org.wso2.carbon.apimgt.webapp.publisher.feature.group</id>
+									<version>${carbon.device.mgt.version}</version>
+								</feature>
+
+								<!--ES feature wrapper inside CDMF-->
+								<feature>
+									<id>org.wso2.carbon.device.mgt.enterprise.store.feature.group</id>
+									<version>${carbon.device.mgt.version}</version>
+								</feature>
                                 <!-- End of Device Management Features -->
+
+
+								<!-- API Management Features -->
+								<feature>
+									<id>org.wso2.carbon.apimgt.core.feature.group</id>
+									<version>${carbon.apimgt.version}</version>
+								</feature>
+								<!-- API Manager Publisher and Store Features -->
+								<feature>
+									<id>org.wso2.carbon.apimgt.publisher.feature.group</id>
+									<version>${carbon.apimgt.version}</version>
+								</feature>
+								<feature>
+									<id>org.wso2.carbon.apimgt.store.feature.group</id>
+									<version>${carbon.apimgt.version}</version>
+								</feature>
+								<!-- End of API Management Features -->
+
 
                                 <!-- Jaggery Features -->
                                 <feature>
@@ -816,21 +840,7 @@
 								</feature>
                                 <!-- End of Governance Features -->
 
-                                <!-- API Management Features -->
-                                <feature>
-                                    <id>org.wso2.carbon.apimgt.core.feature.group</id>
-                                    <version>${carbon.apimgt.version}</version>
-                                </feature>
-                                <!-- API Manager Publisher and Store Features -->
-                                <feature>
-                                    <id>org.wso2.carbon.apimgt.publisher.feature.group</id>
-                                    <version>${carbon.apimgt.version}</version>
-                                </feature>
-                                <feature>
-                                    <id>org.wso2.carbon.apimgt.store.feature.group</id>
-                                    <version>${carbon.apimgt.version}</version>
-                                </feature>
-                                <!-- End of API Management Features -->
+
 
                                 <!-- Notification Support: Mail -->
                                 <feature>
@@ -956,7 +966,6 @@
 
 								<!--========================================================================================================-->
 								<!-- End of Enterprise Store Features -->
-
 
 							</features>
                         </configuration>
