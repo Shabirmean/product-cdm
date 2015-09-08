@@ -47,8 +47,7 @@
     <!-- Security configurations -->
     <Security>
         <UserTrustedRPStore>
-            <Location>${carbon.home}/repository/resources/security/userRP.jks
-            </Location>
+            <Location>${carbon.home}/repository/resources/security/userRP.jks</Location>
             <!-- Keystore type (JKS/PKCS12 etc.) -->
             <Type>JKS</Type>
             <!-- Keystore password -->
@@ -188,12 +187,13 @@
             all the application keys are saved in to the same table. UserName Assertion
             should be 'true' to use this. -->
         <EnableAccessTokenPartitioning>false</EnableAccessTokenPartitioning>
-        <!-- user store domain names and mapping to new table name. eg: if you
-            provide 'A:foo.com', foo.com should be the user store domain name and 'A'
-            represent the relavant mapping of token store table, i.e. tokens will be
-            added to a table called IDN_OAUTH2_ACCESS_TOKEN_A. -->
-        <AccessTokenPartitioningDomains><!-- A:foo.com, B:bar.com -->
-        </AccessTokenPartitioningDomains>
+
+	<!-- user store domain names and mappings to new table names.
+				eg: if you provide 'A:foo.com', foo.com should be the user store domain name and 'A' represent the relavant mapping of
+				token storing table, i.e. tokens relevant to the users comming from foo.com user store will be added to a table called
+				IDN_OAUTH2_ACCESS_TOKEN_A. -->
+	<AccessTokenPartitioningDomains><!-- A:foo.com, B:bar.com --></AccessTokenPartitioningDomains>
+
         <AuthorizationContextTokenGeneration>
             <Enabled>false</Enabled>
             <TokenGeneratorImplClass>org.wso2.carbon.identity.oauth2.authcontext.JWTTokenGenerator</TokenGeneratorImplClass>
@@ -202,9 +202,11 @@
             <SignatureAlgorithm>SHA256withRSA</SignatureAlgorithm>
             <AuthorizationContextTTL>15</AuthorizationContextTTL>
         </AuthorizationContextTokenGeneration>
+
         <SAML2Grant>
             <!--SAML2TokenHandler></SAML2TokenHandler-->
         </SAML2Grant>
+
         <OpenIDConnect>
             <IDTokenBuilder>org.wso2.carbon.identity.openidconnect.DefaultIDTokenBuilder</IDTokenBuilder>
             <IDTokenIssuerID>https://localhost:9443/oauth2endpoints/token</IDTokenIssuerID>
@@ -260,7 +262,9 @@
 
     <EntitlementSettings>
         <!-- Uncomment this to enable on-demand policy loading -->
-        <!--OnDemandPolicyLoading> <Enable>true</Enable> <MaxInMemoryPolicies>100</MaxInMemoryPolicies>
+        <!--OnDemandPolicyLoading>
+                <Enable>true</Enable>
+                <MaxInMemoryPolicies>100</MaxInMemoryPolicies>
             </OnDemandPolicyLoading -->
         <DecisionCaching>
             <Enable>true</Enable>

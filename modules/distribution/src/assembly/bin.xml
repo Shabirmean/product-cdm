@@ -132,14 +132,14 @@
 			</includes>
 		</fileSet>
 
-		<!-- copy documentation -->
+        <!-- Copy Documentation -->
 		<fileSet>
 			<directory>target/site</directory>
 			<outputDirectory>wso2cdm-${pom.version}/docs</outputDirectory>
 			<fileMode>755</fileMode>
 		</fileSet>
 
-		<!-- copy the landing page webapp -->
+        <!-- Copy the landing page webapp -->
 		<!-- <fileSet>
 			 <directory>src/repository/resources/stratos_root</directory>
 			 <outputDirectory>wso2cdm-${pom.version}/repository/deployment/server/webapps/STRATOS_ROOT</outputDirectory>
@@ -180,6 +180,7 @@
 			</includes>
 		</fileSet>
 		<fileSet>
+			<!--NOT FOUND -->
 			<directory>src/repository/conf/datasources</directory>
 			<outputDirectory>wso2cdm-${pom.version}/repository/conf/datasources
 			</outputDirectory>
@@ -234,6 +235,7 @@
 			</includes>
 		</fileSet>
 
+        <!--Copying modules-->
 		<fileSet>
 			<directory>
 				../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/modules
