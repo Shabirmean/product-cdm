@@ -392,8 +392,6 @@
     </repositories>
 
     <properties>
-        <!--<testng.version>6.1.1</testng.version>-->
-        <testng.version>6.8.5</testng.version>
         <carbon.kernel.version>4.4.1</carbon.kernel.version>
         <carbon.p2.plugin.version>1.5.4</carbon.p2.plugin.version>
         <maven-buildnumber-plugin.version>1.3</maven-buildnumber-plugin.version>
@@ -403,7 +401,6 @@
         <axis2-transports.wso2.version>1.1.0-wso2v13</axis2-transports.wso2.version>
 
         <jboss-transaction-api.version>1.0.0.Final</jboss-transaction-api.version>
-        <carbon.p2.plugin.version>1.5.4</carbon.p2.plugin.version>
 
         <!--Jaggery -->
         <!--<jaggery.version>0.10.0</jaggery.version>-->
@@ -432,8 +429,8 @@
         <!-- Store Features -->
         <!--+++++++++++++++++++++++++++++++++++++++++++++++-->
         <!--<product.es.version>2.0.0-SNAPSHOT</product.es.version>-->
-        <carbon.store.version>2.3.5-SNAPSHOT</carbon.store.version>
-        <carbon.social.version>2.3.5-SNAPSHOT</carbon.social.version>
+        <carbon.store.version>2.3.6</carbon.store.version>
+        <carbon.social.version>2.3.6</carbon.social.version>
         <!--+++++++++++++++++++++++++++++++++++++++++++++++-->
         <!-- End of Store Features -->
 
@@ -447,14 +444,15 @@
 
 
         <!--Testing -->
-        <automation.test.framework.version>4.3.1</automation.test.framework.version>
-        <automation.utils.version>4.3.0</automation.utils.version>
-        <testng.version>6.8</testng.version>
+        <automation.test.framework.version>4.4.1</automation.test.framework.version>
+        <testng.version>6.8.5</testng.version>
+        <automation.utils.version>4.4.1</automation.utils.version>
         <test.automation.emm.ui.version>1.1.0</test.automation.emm.ui.version>
 
         <!--Eclipse OSGi-->
         <eclipse.equinox.common.version>3.6.100.v20120522-1841</eclipse.equinox.common.version>
-        <eclipse.osgi.version>3.8.1.v20120830-144521</eclipse.osgi.version>
+        <!--<eclipse.osgi.version>3.8.1.v20120830-144521</eclipse.osgi.version>-->
+        <eclipse.osgi.version>3.9.1.v20130814-1242</eclipse.osgi.version>
 
         <orbit.version.h2.engine>1.2.140.wso2v3</orbit.version.h2.engine>
 
@@ -464,7 +462,7 @@
         <tomcat.jdbc.pooling.version>7.0.34.wso2v2</tomcat.jdbc.pooling.version>
 
         <!-- Carbon Commons -->
-        <carbon.commons.version>4.4.6</carbon.commons.version>
+        <carbon.commons.version>4.4.7</carbon.commons.version>
 
         <!-- Carbon Deployment -->
         <carbon.deployment.version>4.5.2</carbon.deployment.version>
@@ -491,7 +489,10 @@
 		<!--Not Used-->
         <cdm.version>1.0.0-SNAPSHOT</cdm.version>
 
-        <!-- Carbon API Management -->
+		<!-- carbon mediation -->
+		<carbon.mediation.version>4.4.5</carbon.mediation.version>
+
+		<!-- Carbon API Management -->
         <carbon.apimgt.version>1.3.0-SNAPSHOT</carbon.apimgt.version>
     </properties>
 
