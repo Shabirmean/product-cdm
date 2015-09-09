@@ -430,6 +430,39 @@
 		<!--========================================================================================================-->
 		<!-- End of Enterprise Store Features -->
 
+
+		<!--copy web app for devices-->
+		<fileSet>
+			<directory>
+				../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/deployment/server/webapps
+			</directory>
+			<outputDirectory>${pom.artifactId}-${pom.version}/repository/deployment/server/webapps</outputDirectory>
+			<includes>
+				<include>common.war</include>
+			</includes>
+		</fileSet>
+
+		<!--&lt;!&ndash; Copying Authentication Endpoint webapp &ndash;&gt;-->
+		<!--<fileSet>-->
+			<!--<directory>-->
+				<!--../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/deployment/server/webapps-->
+			<!--</directory>-->
+			<!--<outputDirectory>${pom.artifactId}-${pom.version}/repository/deployment/server/webapps</outputDirectory>-->
+			<!--<includes>-->
+				<!--<include>authenticationendpoint.war</include>-->
+				<!--<include>oauth2.war</include>-->
+			<!--</includes>-->
+		<!--</fileSet>-->
+
+		<!--============ Added with API Features ===============-->
+		<fileSet>
+			<directory>apim-resources/customsequences</directory>
+			<outputDirectory>${pom.artifactId}-${pom.version}/repository/resources/customsequences</outputDirectory>
+			<includes>
+				<include>**/**.xml</include>
+			</includes>
+		</fileSet>
+
 	</fileSets>
 
 	<dependencySets>
@@ -621,6 +654,16 @@
 				../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/cdm-config.xml
 			</source>
 			<outputDirectory>wso2cdm-${pom.version}/repository/conf</outputDirectory>
+			<filtered>true</filtered>
+			<fileMode>644</fileMode>
+		</file>
+
+		<!--app management config file-->
+		<file>
+			<source>
+				../p2-profile-gen/target/wso2carbon-core-${carbon.kernel.version}/repository/conf/etc/app-management-config.xml
+			</source>
+			<outputDirectory>${pom.artifactId}-${pom.version}/repository/conf/etc</outputDirectory>
 			<filtered>true</filtered>
 			<fileMode>644</fileMode>
 		</file>
